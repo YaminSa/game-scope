@@ -31,6 +31,9 @@ game-scope/
 ├── script.js         # JavaScript logic
 ├── README.md         # Project documentation
 ```
+## 🌐 Live Demo
+
+🔗 https://yaminsa.github.io/game-scope/
 
 This project is licensed under the [MIT License](LICENSE).
 
