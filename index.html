@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GameScope - Discover and explore thousands of video games. Search by title, browse by genre, and find your next gaming adventure." />
+  <meta name="keywords" content="games, video games, gaming, game search, game discovery, RAWG, game database" />
+  <meta name="author" content="Yamin" />
+  
+  <meta property="og:title" content="GameScope - Game Discovery Platform" />
+  <meta property="og:description" content="Discover and explore thousands of video games with GameScope" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.jpg" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GameScope - Game Discovery Platform" />
+  <meta name="twitter:description" content="Discover and explore thousands of video games" />
+  
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="//api.rawg.io" />
+  
+  <title>GameScope - Discover Amazing Games</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="main-header" role="banner">
+    <div class="left">
+      <h1 class="logo">🎮 GameScope</h1>
+    </div>
+    <div class="center">
+      <form class="search-form" role="search">
+        <label for="gameInput" class="sr-only">Search for games</label>
+        <input 
+          type="search" 
+          id="gameInput" 
+          name="search"
+          placeholder="Search games..." 
+          aria-label="Search for games"
+          autocomplete="off"
+        />
+        <button type="submit" id="searchBtn" aria-label="Search games">🔍</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="main-container" id="main-content">
+    <aside class="genre-sidebar" role="navigation" aria-label="Game genres">
+      <h2 class="sidebar-title">Browse by Genre</h2>
+      <div id="genreSidebar" class="genre-buttons"></div>
+    </aside>
+    
+    <section class="content-area">
+      <div id="loading" class="loading-spinner" aria-hidden="true">
+        <div class="spinner"></div>
+        <p>Loading awesome games...</p>
+      </div>
+      
+      <div id="error-message" class="error-container" role="alert" aria-live="polite"></div>
+      
+      <div id="results-header" class="results-header">
+        <h2 id="results-title">Featured Games</h2>
+        <div id="results-count" class="results-count"></div>
+      </div>
+      
+      <section id="result" class="game-grid" aria-label="Game search results"></section>
+      
+      <div id="no-results" class="no-results" style="display: none;">
+        <div class="no-results-icon">🎮</div>
+        <h3>No games found</h3>
+        <p>Try adjusting your search terms or browse by genre</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="load-more-section" class="load-more-container">
+    <button id="loadMoreBtn" type="button">
+      <span class="btn-text">Load More Games</span>
+      <span class="btn-loading" style="display: none;">Loading...</span>
+    </button>
+  </div>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" style="display: none;">
+    ↑
+  </button>
+
+  <footer class="stats-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-stat">
+        <span class="stat-icon">🎮</span>
+        <span class="stat-text">1000+ Games Indexed</span>
+      </div>
+      <div class="footer-stat">
+        <span class="stat-icon">⚡</span>
+        <span class="stat-text">Powered by RAWG</span>
+      </div>
+      <div class="footer-stat">
+        <span class="stat-icon">🧠</span>
+        <span class="stat-text">Built by Yamin</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#" class="footer-link">About</a>
+      <a href="#" class="footer-link">Privacy</a>
+      <a href="#" class="footer-link">Terms</a>
+    </div>
+  </footer>
+
+  <!-- ✅ Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
